@@ -98,7 +98,7 @@ These are client-side contexts that wrap the main UI components.
 
 ## Running Tests
 
-Tests use Vitest with React Testing Library. Test files are colocated with source files in `__tests__` directories.
+Tests use Vitest with React Testing Library. Config is in `vitest.config.mts`. Test files are colocated with source files in `__tests__` directories.
 
 Example test locations:
 - `src/components/chat/__tests__/ChatInterface.test.tsx`
