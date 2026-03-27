@@ -26,7 +26,9 @@ export async function POST(req: Request) {
 
   // Reconstruct the VirtualFileSystem from serialized data
   const fileSystem = new VirtualFileSystem();
-  fileSystem.deserializeFromNodes(files);
+  if (files && Object.keys(files).length > 0) {
+    fileSystem.deserializeFromNodes(files);
+  }
 
   const model = getLanguageModel();
   // Use fewer steps for mock provider to prevent repetition

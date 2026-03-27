@@ -84,7 +84,7 @@ These are client-side contexts that wrap the main UI components.
 
 ### Database & Auth
 
-- **Prisma schema** (`prisma/schema.prisma`) has two models: `User` and `Project`
+- **Prisma schema** (`prisma/schema.prisma`) defines the database structure with two models: `User` and `Project`. Always reference this file when you need to understand the structure of data stored in the database.
 - **Custom Prisma output**: Generated client lives in `src/generated/prisma` (not default `node_modules`)
 - **Projects** store serialized chat messages (`messages` field as JSON) and virtual file system state (`data` field as JSON)
 - **Auth** uses JWT with bcrypt password hashing (`src/lib/auth.ts`)
@@ -132,3 +132,7 @@ npx prisma generate
 ```
 
 **Import paths**: This project uses the `@/` alias for all local imports (configured in `tsconfig.json`). Always use `@/lib/...` or `@/components/...` instead of relative paths.
+
+## Coding Style
+
+**Comments**: Use comments sparingly. Only add comments where the logic isn't self-evident or when explaining genuinely complex code.
